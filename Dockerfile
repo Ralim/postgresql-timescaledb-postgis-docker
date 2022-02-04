@@ -75,18 +75,18 @@ RUN set -eux \
     && make -j$(nproc) \
     && make install \
     \
-    # regress check
-    && mkdir /tempdb \
-    && chown -R postgres:postgres /tempdb \
-    && su postgres -c 'pg_ctl -D /tempdb init' \
-    && su postgres -c 'pg_ctl -D /tempdb start' \
-    && cd regress \
-    && make -j$(nproc) check RUNTESTFLAGS=--extension   PGUSER=postgres \
-    #&& make -j$(nproc) check RUNTESTFLAGS=--dumprestore PGUSER=postgres \
-    #&& make garden                                      PGUSER=postgres \
-    && su postgres -c 'pg_ctl -D /tempdb --mode=immediate stop' \
-    && rm -rf /tempdb \
-    && rm -rf /tmp/pgis_reg \
+    # regression check
+    # && mkdir /tempdb \
+    # && chown -R postgres:postgres /tempdb \
+    # && su postgres -c 'pg_ctl -D /tempdb init' \
+    # && su postgres -c 'pg_ctl -D /tempdb start' \
+    # && cd regress \
+    # && make -j$(nproc) check RUNTESTFLAGS=--extension   PGUSER=postgres \
+    # #&& make -j$(nproc) check RUNTESTFLAGS=--dumprestore PGUSER=postgres \
+    # #&& make garden                                      PGUSER=postgres \
+    # && su postgres -c 'pg_ctl -D /tempdb --mode=immediate stop' \
+    # && rm -rf /tempdb \
+    # && rm -rf /tmp/pgis_reg \
     # add .postgis-rundeps
     && apk add --no-cache --virtual .postgis-rundeps \
     gdal \
