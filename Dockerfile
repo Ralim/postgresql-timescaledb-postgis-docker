@@ -2,10 +2,10 @@ FROM timescale/timescaledb:latest-pg14
 #Forked from https://github.com/Twenty7/postgresql-timescaledb-postgis-docker
 LABEL maintainer="Ralim<ralim@ralimtek.com>"
 
-ENV POSTGIS_VERSION 3.2.0
-ENV POSTGIS_SHA256 c725d1be6d57ad199bbb6393cc3546defb70de1c78fe1787f7ccef2d51c3647b
+ENV POSTGIS_VERSION 3.2.1
+ENV POSTGIS_SHA256 FBAB68DDE6CA3934B24BA08C8AB0CFF2594F57F93DEAB41A15C82AE1BB69893E
 
-ENV POSTGIS2_GEOS_VERSION tags/3.8.2
+ENV POSTGIS2_GEOS_VERSION tags/3.10.2
 
 RUN set -eux \
     \
