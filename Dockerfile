@@ -38,6 +38,8 @@ RUN set -eux \
     libxml2-dev \
     llvm11-dev \
     llvm12-dev \
+    llvm12 \
+    llvm11 \
     make \
     pcre-dev \
     perl \
