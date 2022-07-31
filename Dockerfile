@@ -38,6 +38,8 @@ RUN set -eux \
     libxml2-dev \
     llvm11-dev \
     llvm12-dev \
+    llvm13-dev \
+    llvm13 \
     llvm12 \
     llvm11 \
     make \
